@@ -1,4 +1,5 @@
 import Post from "./Post";
+import NewPost from "./NewPost";
 
 function PostLists() {
 	return (

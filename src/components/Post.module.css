@@ -3,11 +3,15 @@
 	border-radius: 1rem;
 	padding: 0.5rem;
 	margin: 2rem;
+	box-shadow: 2px 4px rgb(88, 87, 87);
+	width: fit-content;
+	display: inline-block;
 }
 
 .person {
 	color: black;
 	font-weight: 500;
+	height: 10px;
 }
 
 .text {
