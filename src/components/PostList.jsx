@@ -1,13 +1,25 @@
 import Post from "./Post";
-import NewPost from "./NewPost";
+import NewPost from "./NewPost.jsx";
+import { useState } from "react";
 
 function PostLists() {
+	const [enteredBody, setEnteredBody] = useState("");
+	const [enteredAuthor, setEnteredAuthor] = useState("");
+
+	function bodyChangeHandler(event) {
+		setEnteredBody(event.target.value);
+	}
+	function authorChageHandler(event) {
+		setEnteredAuthor(event.target.value);
+	}
 	return (
-		<main>
-			<Post author="Shreenidhi" body="Capital of India is Delhi" />
-			<Post author="Kavya" body="Capital of Karnataka is Bengaluru" />
-			<Post author="Rakshit" body="Peacock is a national bird" />
-		</main>
+		<>
+			<NewPost
+				onBodyChange={bodyChangeHandler}
+				onAuthorChange={authorChageHandler}
+			/>
+			<Post author={enteredAuthor} body={enteredBody} />
+		</>
 	);
 }
 export default PostLists;
