@@ -1,6 +1,6 @@
 import classes from "./Post.module.css";
 
-function Post(author, body) {
+function Post({ author, body }) {
 	return (
 		<div className={classes.poster}>
 			<p className={classes.person}>{author}</p>

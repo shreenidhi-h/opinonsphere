@@ -1,6 +1,7 @@
 import Post from "./Post";
 import NewPost from "./NewPost";
 import { useState } from "react";
+import Modal from "./modal";
 
 function PostLists() {
 	const [modalIsVisible, setModalVisible] = useState(true);
