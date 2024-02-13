@@ -5,7 +5,6 @@ import { useState } from "react";
 function PostLists() {
 	const [enteredBody, setEnteredBody] = useState("");
 	const [enteredAuthor, setEnteredAuthor] = useState("");
-
 	function bodyChangeHandler(event) {
 		setEnteredBody(event.target.value);
 	}
@@ -14,10 +13,12 @@ function PostLists() {
 	}
 	return (
 		<>
-			<NewPost
-				onBodyChange={bodyChangeHandler}
-				onAuthorChange={authorChageHandler}
-			/>
+			<Modal>
+				<NewPost
+					onBodyChange={bodyChangeHandler}
+					onAuthorChange={authorChageHandler}
+				/>
+			</Modal>
 			<Post author={enteredAuthor} body={enteredBody} />
 		</>
 	);

@@ -1,12 +1,6 @@
-import { useState } from "react";
 import classes from "./NewPost.module.css";
 
 function NewPost(props) {
-	const [enteredBody, setEnteredBody] = useState("");
-
-	function authorchangeBodyHandler(event) {
-		setEnteredBody(event.target.value);
-	}
 	return (
 		<form className={classes.form}>
 			<p>
