@@ -1,29 +1,24 @@
-import Post from "./Post";
-import NewPost from "./NewPost";
 import { useState } from "react";
+
+import NewPost from "./NewPost";
 import Modal from "./modal";
 
 function ListofPost({ Posting, onStopPosting }) {
-	const [enteredBody, setEnteredBody] = useState("");
-	const [enteredAuthor, setEnteredAuthor] = useState("");
+	const [posts, setPosts] = useState([]);
 
-	function bodyChangeHandler(event) {
-		setEnteredBody(event.target.value);
-	}
-	function authorChageHandler(event) {
-		setEnteredAuthor(event.target.value);
+	function addPostHandler(postData) {
+		setPosts((exisitingPosts) => [postData, ...exisitingPosts]);
 	}
 	return (
 		<>
 			{Posting && (
 				<Modal onClose={onStopPosting}>
-					<NewPost
-						onBodyChange={bodyChangeHandler}
-						onAuthorChange={authorChageHandler}
-					/>
+					<NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
 				</Modal>
 			)}
-			<Post author={enteredAuthor} body={enteredBody} />
+			{posts.map((post) => (
+				<Post author={post.autor} body={post.body} />
+			))}
 		</>
 	);
 }
