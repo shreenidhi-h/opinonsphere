@@ -12,12 +12,12 @@ function NewPost({ onCancel, onAddPost }) {
 		setEnteredAuthor(event.target.value);
 	}
 	function submitHandler(event) {
-		event.preventDefaut();
+		event.preventDefault();
 		const postData = {
 			body: enteredBody,
 			author: enteredAuthor,
 		};
-		onAddPost();
+		onAddPost(postData);
 		onCancel();
 	}
 	return (

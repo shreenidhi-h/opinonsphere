@@ -10,19 +10,16 @@
 .logo {
 	font-size: 60px;
 	margin-right: 25px;
+	color: rgb(2, 59, 87);
 }
 
 .creation {
 	margin-left: 200px;
 	background-color: rgb(225, 235, 159);
-	border: 2px solid transparent;
 	box-shadow: 2px 2px rgb(123, 122, 122);
 }
 
 .heading {
 	margin-bottom: 50px;
-}
-
-.creation:hover {
-	border: 2px solid transparent;
+	color: rgb(22, 123, 137);
 }
