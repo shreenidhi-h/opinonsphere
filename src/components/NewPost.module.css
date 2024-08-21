@@ -37,7 +37,7 @@
 
 .actions {
 	font-size: 20px;
-	background-color: #2c3e06;
+	background-color: #9dbd4f;
 }
 .cancel {
 	background-color: #46532c;
@@ -46,7 +46,7 @@
 }
 
 .actions:hover {
-	color: rgb(190, 171, 116);
+	color: #f5f8f0;
 }
 .cancel:hover {
 	color: rgb(190, 171, 116);

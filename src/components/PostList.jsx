@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Post from "./Post";
 import NewPost from "./NewPost";
-import Modal from "./modal";
+import Modal from "./Modal";
 
 function ListofPost({ Posting, onStopPosting }) {
 	const [posts, setPosts] = useState([]);
@@ -21,7 +21,7 @@ function ListofPost({ Posting, onStopPosting }) {
 				<Post key={post.body} author={post.author} body={post.body} />
 			))}
 			{posts.length === 0 && (
-				<div style={{ textAlign: "center", color: "#E77474" }}>
+				<div style={{ textAlign: "center", color: "#97ba42" }}>
 					<h2>There are no posts yet.</h2>
 					<p>Start adding some!</p>
 				</div>
